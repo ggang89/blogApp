@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { styled } from "styled-components";
-import Post from "./post";
-import { Link } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 const Title = styled.h1`
   text-align: center;
 `;
 const Nav = styled.ul`
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
   width: 400px;
   background: #bbb;
   margin:0 auto;
@@ -16,7 +15,7 @@ const Nav = styled.ul`
 const Li = styled.li`
   display: inline-block;
   padding-right: 20px;
-  font-size: 16px;
+  font-size: 14px;
   //font-weight: 600;
   font-style: italic;
   
@@ -57,7 +56,7 @@ function Home() {
               <Link to="/todos">◾ Todos</Link>
             </Li>
           </Nav>
-          <Post />
+          <Outlet />
         </>
       )}
     </>

@@ -1,3 +1,3 @@
 export default function Photos() {
-  return
+  return <h1>photos 페이지</h1>
 }

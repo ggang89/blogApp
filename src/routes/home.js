@@ -1,32 +1,25 @@
 import { useState, useEffect } from "react";
-import { styled,createGlobalStyle } from "styled-components";
+import { styled } from "styled-components";
 import Post from "./post";
 import { Link } from "react-router-dom";
-const GlobalStyled = createGlobalStyle`
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-li{list-style-type: style none;}
-a{text-decoration:none}
-button{cursor:pointer}`
 const Title = styled.h1`
   text-align: center;
 `;
 const Nav = styled.ul`
   height: 50px;
   line-height: 50px;
-  width: 350px;
-  margin-left: 20px;
-
+  width: 400px;
+  background: #bbb;
+  margin:0 auto;
+ text-align: center;
 `;
 const Li = styled.li`
   display: inline-block;
   padding-right: 20px;
-  font-size: 20px;
+  font-size: 16px;
   //font-weight: 600;
   font-style: italic;
+  
 `;
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -43,7 +36,6 @@ function Home() {
   });
   return (
     <>
-      <GlobalStyled/>
       {loading ? (
         <Title>Loading...🐧🐧🐧</Title>
       ) : (
@@ -52,6 +44,9 @@ function Home() {
             <Link to="/"> {blog}</Link>
           </Title>
           <Nav>
+            <Li>
+              <Link to="/">◾ Home</Link>
+            </Li>
             <Li>
               <Link to="/post">◾ Post</Link>
             </Li>

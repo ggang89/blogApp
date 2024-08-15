@@ -2,7 +2,8 @@ import { styled } from "styled-components";
 const Box = styled.div`
   width: 500px;
   height: 500px;
-  background-color: darkcyan;
+  //background-color: darkcyan;
+  border:10px solid darkgreen;
   margin: 20px auto;
   align-items: center;
   display: flex;

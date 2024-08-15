@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const Title = styled.h1`
   text-align: center;
+  font-size: 50px;
 `;
 const Nav = styled.ul`
   height: 50px;

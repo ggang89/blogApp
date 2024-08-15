@@ -33,9 +33,9 @@ export default function PostPage({posts }) {
       {posts.map((p) => (
         <Content key={p.id}>
           <HeadLine>
-            <Link to={`/posts/${p.id}`}>▫Title : "{p.title}"</Link>
+            <Link to={`/posts/${p.id}`}>🗨 "{p.title}"</Link>
           </HeadLine>
-          <Text>💬 {p.body}</Text>
+          <Text> ▫{p.body}</Text>
         </Content>
       ))}
     </PostBox>

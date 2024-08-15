@@ -38,7 +38,7 @@ export default function Post() {
   const [loading, setLoading] = useState(true);
   const [posts, setPost]=useState([])
   const getPost = async() => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=20`);
     const json = await response.json();
     setPost(json);
     setLoading(false);

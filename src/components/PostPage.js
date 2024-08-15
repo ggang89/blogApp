@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const PostBox = styled.div`
   display: flex;
@@ -31,7 +32,9 @@ export default function PostPage({posts }) {
     <PostBox>
       {posts.map((p) => (
         <Content key={p.id}>
-          <HeadLine>▫Title : "{p.title}"</HeadLine>
+          <HeadLine>
+            <Link to={`/posts/${p.id}`}>▫Title : "{p.title}"</Link>
+          </HeadLine>
           <Text>💬 {p.body}</Text>
         </Content>
       ))}

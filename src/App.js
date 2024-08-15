@@ -3,6 +3,7 @@ import Home from "./routes/home";
 import Post from "./routes/post";
 import { createGlobalStyle } from "styled-components";
 import Intro from "./routes/Intro";
+import Detail from "./routes/Detail";
 
 const GlobalStyled = createGlobalStyle`*{
   margin: 0;
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="/intro" replace={true} />},
       { path:"intro",element:<Intro/>},
-      { path: "post", element: <Post /> },
+      { path: "posts", element: <Post /> },
+      { path: "posts/:postId", element:<Detail/>}
     ],
   },
 ]);

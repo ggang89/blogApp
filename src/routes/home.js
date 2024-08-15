@@ -31,7 +31,7 @@ function Home() {
               <Link to="/intro">◾ Home</Link>
             </Li>
             <Li>
-              <Link to="/post">◾ Post</Link>
+              <Link to="/posts">◾ Post</Link>
             </Li>
           </Nav>
           <Outlet />

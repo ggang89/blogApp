@@ -1,8 +1,6 @@
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import Home from "./routes/home";
 import Post from "./routes/post";
-import Photos from "./routes/photos";
-import Todos from "./routes/todos";
 import { createGlobalStyle } from "styled-components";
 import Intro from "./routes/Intro";
 
@@ -22,8 +20,6 @@ const router = createBrowserRouter([
       { index: true, element: <Navigate to="/intro" replace={true} />},
       { path:"intro",element:<Intro/>},
       { path: "post", element: <Post /> },
-      { path: "photos", element: <Photos /> },
-      { path: "todos", element: <Todos /> },
     ],
   },
 ]);

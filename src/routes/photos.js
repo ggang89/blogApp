@@ -34,7 +34,7 @@ export default function Photos() {
   const [loading, setLoading] = useState(true);
   const [photos, setPhotos] = useState([]);
   const getPhotos = async () => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/photos`);
+    const response = await fetch(`https://jsonplaceholder.typicode.com/photos?_limit=30`);
     const json = await response.json();
     setLoading(false);
     setPhotos(json);

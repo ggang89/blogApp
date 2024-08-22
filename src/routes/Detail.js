@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom"
 import { styled } from "styled-components";
 
@@ -50,34 +50,36 @@ font-size: 17px;
 padding: 5px 7px;
 line-height: 30px;
 `
+
 export default function Detail() {
   const { postId } = useParams();
   const [loading, setLoading]=useState(true)
   const [post, setPost] = useState({})
   const [comments, setComments] =useState([])
-  
-  const getPost = async () => {
+
+  const getPost = useCallback(async () => {
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/posts/${postId}`
     );
     const json = await response.json();
     setLoading(false);
     setPost(json);
-  }
-  const getComments = async () => {
+  }, [postId])
+  const getComments = useCallback(async () => {
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
     );
     const json = await response.json();
     setComments(json);
-  }
+  },[postId])
   useEffect(() => {
     getPost();
   
-  })
+  }, [getPost]);
+
   useEffect(() => {
       getComments();
-  })//하나의 useEffect안에 함수 같이 써도 되나,따로 써야하나
+  },[getComments])//하나의 useEffect안에 함수 같이 써도 되나,따로 써야하나
   //계속 오류 나옴...
   return (
     <>

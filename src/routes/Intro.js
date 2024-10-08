@@ -18,7 +18,7 @@ const Text = styled.p`
 export default function Intro() {
   return (
     <Box>
-      <Text>Welcome to the Fake Blog, created with free Fake API🎉</Text>
+      <Text>Welcome to the Fake Blog, created with Free Fake API🎉</Text>
     </Box>
   );
 }

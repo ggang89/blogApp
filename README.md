@@ -17,7 +17,11 @@
  ◽ **Detail Page**   
  ![DetailPage](./public/readme/blogDetailPage.JPG)
  
- 
+ ### ✔ 기능 서비스   
+ * router을 통한 페이지 분할 (HOME Page, POST page)  
+ * 개별 post의 상세 내용 확인 가능 
+     * post별로 내용, 그림, 댓글이 새롭게 생성됨 
+
  ### 📡 활용 API   
 *  [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 
@@ -43,4 +47,7 @@
   * Library : React
   * routing library : React Router dom
   * Data Fetching : Fetch( ) API
-  * Styling : styled - components
+  * Styling : styled - components    
+     
+
+
